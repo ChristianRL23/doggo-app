@@ -1,9 +1,10 @@
 import './App.scss';
+import HeaderFooter from './layouts/HeaderFooter/HeaderFooter';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <HeaderFooter type="header" />
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 7rem;
+}
+
+.footer {
+  background-color: var(--color-primary-black);
+}
