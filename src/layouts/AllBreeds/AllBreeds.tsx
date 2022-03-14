@@ -1,4 +1,5 @@
 import { DogModel } from '../../models';
+import DogsGrid from '../DogsGrid/DogsGrid';
 import './AllBreeds.scss';
 
 interface AllBreedsProps {
@@ -12,11 +13,7 @@ const AllBreeds = ({ dogData }: AllBreedsProps) => {
         <h2>All breeds</h2>
         <p>Meeting new friends is great. Don't be shy, discover some doggos!</p>
       </div>
-      <section className="all-breeds__dogs-grid">
-        {dogData.map((dog) => (
-          <p>{dog.name}</p>
-        ))}
-      </section>
+      {dogData.length !== 0 && <DogsGrid itemsPerPage={9} dogData={dogData} />}
     </main>
   );
 };
