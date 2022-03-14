@@ -1,0 +1,28 @@
+.hero {
+  background-image: url('./hero-image.png');
+  height: 50rem;
+  background-size: cover;
+  background-position-y: -8rem;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding: 3rem;
+    width: 45%;
+
+    &__texts {
+      text-align: center;
+      h1 {
+        font-size: 6rem;
+        color: var(--color-primary-white);
+        font-family: var(--font-serif);
+        font-weight: 400;
+        margin-bottom: 1.8rem;
+      }
+      p {
+        font-size: 2rem;
+        color: whitesmoke;
+        font-weight: 300;
+      }
+    }
+  }
+}
