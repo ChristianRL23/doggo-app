@@ -6,8 +6,10 @@
   background-repeat: no-repeat;
 
   &__content {
-    padding: 3rem;
+    padding: 4rem 3rem;
     width: 45%;
+    height: 100%;
+    position: relative;
 
     &__texts {
       text-align: center;
