@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
+import AllBreeds from './layouts/AllBreeds/AllBreeds';
 import HeaderFooter from './layouts/HeaderFooter/HeaderFooter';
 import Hero from './layouts/Hero/Hero';
 import { DogModel } from './models';
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <HeaderFooter type="header" />
       <Hero dogData={dogData} />
+      <AllBreeds dogData={dogData} />
     </div>
   );
 }

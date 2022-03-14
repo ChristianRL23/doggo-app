@@ -1,0 +1,16 @@
+@mixin containerPadding {
+  padding: 4rem 3rem;
+}
+
+@mixin paragraph($font-size) {
+  font-size: #{$font-size}rem;
+  color: var(--color-primary-gray);
+  font-weight: 300;
+}
+
+@mixin subtitle($font-size) {
+  font-size: #{$font-size}rem;
+  font-family: var(--font-serif);
+  color: var(--color-primary-green);
+  font-weight: 400;
+}

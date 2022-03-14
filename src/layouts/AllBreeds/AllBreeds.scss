@@ -1,0 +1,13 @@
+@use './../../shared' as s;
+
+.all-breeds {
+  @include s.containerPadding;
+
+  h2 {
+    @include s.subtitle(4);
+  }
+
+  p {
+    @include s.paragraph(2);
+  }
+}
