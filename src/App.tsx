@@ -22,6 +22,7 @@ function App() {
       <HeaderFooter type="header" />
       <Hero dogData={dogData} />
       <AllBreeds dogData={dogData} />
+      <HeaderFooter type="footer" />
     </div>
   );
 }

@@ -1,17 +1,10 @@
 .dogs-grid {
   display: grid;
-  grid-template-areas:
-    '. . .'
-    '. . .'
-    '. . .'
-    'navigation navigation navigation navigation';
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 25rem);
-
   gap: 4rem;
 
   ul {
-    grid-area: navigation;
     display: flex;
     justify-content: center;
     gap: 6rem;
