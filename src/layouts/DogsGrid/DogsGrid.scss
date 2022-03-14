@@ -1,8 +1,36 @@
 .dogs-grid {
   display: grid;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .'
+    'navigation navigation navigation navigation';
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 25rem);
+
   gap: 4rem;
+
+  ul {
+    grid-area: navigation;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    list-style: none;
+
+    .active-page {
+      color: var(--color-primary-green);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    li {
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--color-primary-gray);
+    }
+  }
 }
 
 .dog-item {
