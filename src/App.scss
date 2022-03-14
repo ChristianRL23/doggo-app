@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary-white: #ffffff;
+  --color-primary-green: #778472;
+  --color-primary-black: #222222;
+  --color-primary-gray: #565656;
+  --font-sans: 'Libre Caslon Text', serif;
+  --border-radius: 0.5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
