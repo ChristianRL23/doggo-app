@@ -1,0 +1,19 @@
+.logo {
+  &--gray,
+  &--white {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+
+    h6 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  &--gray {
+    color: var(--color-primary-gray);
+  }
+  &--white {
+    color: var(--color-primary-white);
+  }
+}
