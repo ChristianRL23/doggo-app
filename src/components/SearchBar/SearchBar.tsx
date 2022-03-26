@@ -1,11 +1,11 @@
+import { useContext } from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
-import { DogModel } from '../../models';
+import ModalContext from '../../context/modalContext';
 import './SearchBar.scss';
 
 interface SearchBarProps {
   inputLabel: string;
   inputPlaceholder: string;
-  dogData: DogModel[];
 }
 
 interface ItemsType {
@@ -13,13 +13,11 @@ interface ItemsType {
   name: string;
 }
 
-const SearchBar = ({
-  inputLabel,
-  inputPlaceholder,
-  dogData,
-}: SearchBarProps) => {
+const SearchBar = ({ inputLabel, inputPlaceholder }: SearchBarProps) => {
+  const modalCtx = useContext(ModalContext);
+
   let items: ItemsType[] = [];
-  dogData.forEach((dog) => {
+  modalCtx.dogData.forEach((dog) => {
     items.push({ id: dog.id, name: dog.name });
   });
   const searchBarStyles = {

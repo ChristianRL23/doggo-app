@@ -1,21 +1,26 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import { DogModel } from '../../models';
+import ModalContext from '../../context/modalContext';
 import './DogsGrid.scss';
 
 interface DogsGridProps {
   itemsPerPage: number;
-  dogData: DogModel[];
 }
 
-const DogsGrid = ({ itemsPerPage, dogData }: DogsGridProps) => {
+const DogsGrid = ({ itemsPerPage }: DogsGridProps) => {
+  const modalCtx = useContext(ModalContext);
+  const { dogData } = modalCtx;
   const Items = ({ currentItems }: any) => {
     return (
       <>
         {currentItems &&
           currentItems.map((item: any) => (
-            <div key={item.id} className="dog-item">
+            <div
+              onClick={() => modalCtx.selectBreed(item.name)}
+              key={item.id}
+              className="dog-item"
+            >
               <div className="dog-item__overlay">
                 <h3>{`${item.name}`}</h3>
               </div>

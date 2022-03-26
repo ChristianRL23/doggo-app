@@ -1,35 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import './App.scss';
 import IndividualDog from './components/IndividualDog/IndividualDog';
+import ModalContext from './context/modalContext';
 import AllBreeds from './layouts/AllBreeds/AllBreeds';
 import HeaderFooter from './layouts/HeaderFooter/HeaderFooter';
 import Hero from './layouts/Hero/Hero';
-import { DogModel } from './models';
 
 function App() {
-  const [dogData, setDogData] = useState<DogModel[]>([]);
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const modalCtx = useContext(ModalContext);
 
   useEffect(() => {
     const fetchDogData = async () => {
       const respose = await fetch('https://api.thedogapi.com/v1/breeds');
       const data = await respose.json();
-      setDogData(data);
+      modalCtx.setDogData(data);
     };
     fetchDogData();
   }, []);
 
   return (
-    <div className="App">
-      {modalOpen && <IndividualDog closeModalFn={closeModal} />}
+    <>
+      {modalCtx.modalIsOpen && <IndividualDog />}
       <HeaderFooter type="header" />
-      <Hero dogData={dogData} />
-      <AllBreeds dogData={dogData} />
+      <Hero />
+      <AllBreeds />
       <HeaderFooter type="footer" />
-    </div>
+    </>
   );
 }
 

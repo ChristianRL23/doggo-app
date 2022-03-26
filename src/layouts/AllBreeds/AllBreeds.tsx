@@ -1,19 +1,18 @@
-import { DogModel } from '../../models';
+import { useContext } from 'react';
+import ModalContext from '../../context/modalContext';
 import DogsGrid from '../DogsGrid/DogsGrid';
 import './AllBreeds.scss';
 
-interface AllBreedsProps {
-  dogData: DogModel[];
-}
+const AllBreeds = () => {
+  const modalCtx = useContext(ModalContext);
 
-const AllBreeds = ({ dogData }: AllBreedsProps) => {
   return (
     <main className="all-breeds">
       <div className="all-breeds__section-description">
         <h2>All breeds</h2>
         <p>Meeting new friends is great. Don't be shy, discover some doggos!</p>
       </div>
-      {dogData.length !== 0 && <DogsGrid itemsPerPage={9} dogData={dogData} />}
+      {modalCtx.dogData.length !== 0 && <DogsGrid itemsPerPage={9} />}
     </main>
   );
 };
