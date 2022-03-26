@@ -23,6 +23,7 @@ const SearchBar = ({ inputLabel, inputPlaceholder }: SearchBarProps) => {
   const searchBarStyles = {
     borderRadius: '5px',
     fontFamily: 'Work Sans',
+    zIndex: 100,
   };
 
   return (
