@@ -7,10 +7,10 @@ const Hero = () => {
       <div className="hero__content">
         <div className="hero__content__texts">
           <h1>WHERE FRIENDSHIP BEGINS</h1>
-          <p>Discover facts and images about man's best friend, the doggo</p>
+          <p>Discover info and images about man's best friend, the doggo</p>
         </div>
         <SearchBar
-          inputLabel="Search by breeds"
+          inputLabel="Search by breed"
           inputPlaceholder="e.g. Super Dog"
         />
       </div>
