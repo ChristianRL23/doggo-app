@@ -11,11 +11,19 @@ function App() {
 
   useEffect(() => {
     const fetchDogData = async () => {
-      const respose = await fetch('https://api.thedogapi.com/v1/breeds');
-      const data = await respose.json();
-      modalCtx.setDogData(data);
+      try {
+        const response = await fetch('https://api.thedogapi.com/v1/breeds');
+        if (response.ok === false)
+          throw new Error('Something went wrong! Please reload the page.');
+        const data = await response.json();
+        modalCtx.setDogData(data);
+      } catch (error: any) {
+        alert(error.message);
+      }
     };
+
     fetchDogData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,7 +1,7 @@
 @use './../../shared' as s;
 
 .all-breeds {
-  padding: 3rem 6rem;
+  @include s.containerPadding;
   &__section-description {
     margin-bottom: 3rem;
     h2 {

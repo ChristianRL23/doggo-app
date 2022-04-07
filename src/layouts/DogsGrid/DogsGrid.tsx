@@ -51,6 +51,9 @@ const DogsGrid = ({ itemsPerPage }: DogsGridProps) => {
     <section className="dogs-grid">
       <Items currentItems={currentItems} />
       <ReactPaginate
+        pageClassName="page"
+        breakClassName="page"
+        marginPagesDisplayed={2}
         activeClassName="active-page"
         onPageChange={handlePageClick}
         pageCount={pageCount}

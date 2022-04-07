@@ -1,5 +1,9 @@
 @mixin containerPadding {
   padding: 3rem 6rem;
+
+  @media screen and (max-width: 650px) {
+    padding: 3rem 3rem;
+  }
 }
 
 @mixin paragraph($font-size) {

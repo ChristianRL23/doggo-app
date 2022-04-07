@@ -11,7 +11,7 @@ const Hero = () => {
         </div>
         <SearchBar
           inputLabel="Search by breed"
-          inputPlaceholder="e.g. Super Dog"
+          inputPlaceholder="e.g. Beagle"
         />
       </div>
     </section>
