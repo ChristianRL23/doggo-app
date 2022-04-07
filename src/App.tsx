@@ -14,7 +14,9 @@ function App() {
       try {
         const response = await fetch('https://api.thedogapi.com/v1/breeds');
         if (response.ok === false)
-          throw new Error('Something went wrong! Please reload the page.');
+          throw new Error(
+            'Something went wrong! Please reload the page or come back later.'
+          );
         const data = await response.json();
         modalCtx.setDogData(data);
       } catch (error: any) {
