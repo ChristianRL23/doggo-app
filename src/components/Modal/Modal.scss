@@ -19,6 +19,17 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 300;
   animation: slide-down 300ms ease-out forwards;
+
+  @media screen and (max-height: 945px) {
+    top: 10vh;
+  }
+  @media screen and (max-height: 845px) {
+    top: 7vh;
+  }
+
+  @media screen and (max-height: 810px) {
+    top: 1vh;
+  }
 }
 
 @keyframes slide-down {

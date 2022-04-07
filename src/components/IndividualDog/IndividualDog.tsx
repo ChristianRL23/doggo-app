@@ -58,13 +58,13 @@ const IndividualDog = () => {
             <DogEntry title="Temperament" value={currentDog!.temperament} />
             <DogEntry height title="Height" value={currentDog!.height.metric} />
             <DogEntry weight title="Weight" value={currentDog!.weight.metric} />
+            <button
+              onClick={modalCtx.closeModal}
+              className="individual-dog__info__button"
+            >
+              Close
+            </button>
           </div>
-          <button
-            onClick={modalCtx.closeModal}
-            className="individual-dog__info__button"
-          >
-            Close
-          </button>
         </div>
       </div>
     </Modal>
